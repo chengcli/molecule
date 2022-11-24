@@ -2,6 +2,9 @@
 #include <configure.hpp>
 #include "molecules.hpp"
 
+// dummy shomate
+Real const DummySpecies<0>::shomate1_[7] = {1., 0., 0., 0., 0., 0., 0.};
+
 // hydrogen
 // 298 ~ 1000 K
 Real const Hydrogen<0>::shomate1_[7] = {

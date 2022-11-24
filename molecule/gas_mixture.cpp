@@ -51,8 +51,10 @@ GasMixture::GasMixture(std::string mixture_string):
       comp_[i] = Ammonia<0>();
     } else if (name == "H2S") {
       comp_[i] = HydrogenSulfide<0>();
+    } else if (name == "Dummy") {
+      comp_[i] = DummySpecies<0>();
     } else {
-      Debugger::Fatal("GasMixture", "unrecognized molecule name");
+      Debugger::Fatal("GasMixture", "unrecognized molecule name", name);
     }
   }
 

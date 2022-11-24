@@ -7,5 +7,6 @@
 #include "ammonia.hpp"
 #include "methane.hpp"
 #include "hydrogen_sulfide.hpp"
+#include "dummy_species.hpp"
 
 #endif
