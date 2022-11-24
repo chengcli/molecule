@@ -1,0 +1,25 @@
+#ifndef CONFIGURE_HPP
+#define CONFIGURE_HPP
+
+// macros
+#define ON 1
+#define OFF 0
+
+// precision
+#define SINGLE_PRECISION @SinglePrecision@
+
+#if SINGLE_PRECISION
+  using Real = float;
+  #ifdef MPI_PARALLEL
+    #define MPI_REAL MPI_FLOAT
+    #define MPI_REAL_INT MPI_FLOAT_INT
+  #endif
+#else
+  using Real = double;
+  #ifdef MPI_PARALLEL
+    #define MPI_REAL MPI_DOUBLE
+    #define MPI_REAL_INT MPI_DOUBLE_INT
+  #endif
+#endif
+
+#endif
