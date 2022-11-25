@@ -15,5 +15,8 @@ std::ostream& operator<<(std::ostream &os, Molecule const& my)
   os << "enthalpy_ref = " << my.enthalpy_ref_/1.E3 << " kJ/mol" << std::endl;
   os << "entropy_ref = " << my.entropy_ref_ << " J/(mol.K)" << std::endl;
   os << "cp (300 K) = " << my.cp(300.) << " J/(mol.K)" << std::endl;
+  if (my.id != "") {
+    os << "id = " << my.id << std::endl;
+  }
   return os;
 }
