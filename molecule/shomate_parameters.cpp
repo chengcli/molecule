@@ -62,7 +62,7 @@ Real const Ammonia<1>::shomate1_[7] = {65.0, 0., 0., 0., 0., 0., 0.};
 
 Real const Ammonia<2>::shomate1_[7] = {46.0, 0., 0., 0., 0., 0., 0.};
 
-// hydrogen sulfide
+// hydrogen-sulfide
 // 298 ~ 1400 K
 Real const HydrogenSulfide<0>::shomate1_[7] = {
   26.88412, 18.67809, 3.434203, -3.378702, 0.135882, -28.91211, 233.3747};
@@ -74,3 +74,7 @@ Real const HydrogenSulfide<0>::shomate2_[7] = {
 Real const HydrogenSulfide<1>::shomate1_[7] = {66.4, 0., 0., 0., 0., 0., 0.};
 
 Real const HydrogenSulfide<2>::shomate1_[7] = {33.2, 0., 0., 0., 0., 0., 0.};
+
+// ammonium-hydrosulfide
+Real const AmmoniumHydrosulfide<2>::shomate1_[7] = 
+  {80., 0., 0., 0., 0., 0., 0.};

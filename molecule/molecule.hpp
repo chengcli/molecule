@@ -29,6 +29,7 @@ class Molecule {
 public:
 // public access members
   std::string     formula;
+  std::string     id;
   Real            mu;
   Real            tripleT;
   Real            tripleP;
