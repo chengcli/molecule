@@ -1,10 +1,6 @@
 #ifndef CONFIGURE_HPP
 #define CONFIGURE_HPP
 
-// macros
-#define ON 1
-#define OFF 0
-
 // precision
 #define SINGLE_PRECISION @SinglePrecision@
 
