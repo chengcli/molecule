@@ -17,10 +17,9 @@ class AmmoniumHydrosulfide {
 template<>
 class AmmoniumHydrosulfide<2> : public Molecule {
 public:
-  AmmoniumHydrosulfide(): Molecule("NH4SH(s)", 51.111, 0., 0.)
+  AmmoniumHydrosulfide(): Molecule("NH4SH(s)", 51.111, 0., 0., 93.12E3)
   {
     phase_id_ = 2;
-    enthalpy_offset_ = -93.12E3;
     shomate_func_ptr_ = get_shomate;
     svp_func_ptr_ = svpNH4SHLewis;
   }

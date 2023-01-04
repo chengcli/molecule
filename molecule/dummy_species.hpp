@@ -12,17 +12,17 @@ class DummySpecies {
 template<>
 class DummySpecies<0> : public Molecule {
 public:
-  DummySpecies() : Molecule("Dummy", 1., 0., 0.)
+  DummySpecies() : Molecule("Dummy", 1., 0., 0., 0.)
   {
     shomate_func_ptr_ = get_shomate;
   }
 
-	static void get_shomate(Real const *&shomate, Real T) {
+  static void get_shomate(Real const *&shomate, Real T) {
     shomate = shomate1_;
   }
 
 private:
-	static Real const shomate1_[7];	// dummy
+  static Real const shomate1_[7]; // dummy
 };
 
 #endif

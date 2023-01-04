@@ -22,7 +22,7 @@
 static Real const FACT_cgs = Constants::hPlanck_cgs*Constants::cLight_cgs/Constants::kBoltz_cgs;
 
 Hydrogen<0>::Hydrogen() :
-  Molecule("H2", 2., 13.8033, 7.04E3)
+  Molecule("H2", 2., 13.8033, 7.04E3, 0.)
 {
   Real B0 = 59.322,
        D0 = 4.71e-02;

@@ -31,30 +31,26 @@ public:
   std::string     formula;
   std::string     id;
   Real            mu;
+
   Real            tripleT;
   Real            tripleP;
+  Real            latentH;
 
 // functions
   Molecule(): // for use of mixture
-    formula(""), mu(0.), tripleT(0.), tripleP(0.),
+    formula(""), mu(0.), tripleT(0.), tripleP(0.), latentH(0.),
     phase_id_(0),
-    enthalpy_offset_(0.),
     enthalpy_ref_(0.),
     entropy_ref_(0.)
   {}
 
-  Molecule(std::string formula_, Real mu_, Real t3, Real p3):
-    formula(formula_), mu(mu_/1.E3), tripleT(t3), tripleP(p3), 
+  Molecule(std::string formula_, Real mu_, Real t3, Real p3, Real l3):
+    formula(formula_), mu(mu_/1.E3), tripleT(t3), tripleP(p3), latentH(l3),
     shomate_func_ptr_(null_shomate),
     phase_id_(0),
-    enthalpy_offset_(0.),
     enthalpy_ref_(0.),
     entropy_ref_(0.)
   {}
-
-  Real getEnthalpyOffset() const {
-    return enthalpy_offset_;
-  }
 
   Real cp(Real T) const {
     return cp_shomate_(T);
@@ -81,7 +77,6 @@ protected:
   ShomateFunc       shomate_func_ptr_;
   VaporPressureFunc svp_func_ptr_;
   int               phase_id_;
-  Real              enthalpy_offset_;
 
   /*void set_shomate_ptr_(Real const *shomate) {
     shomate_ = shomate;
